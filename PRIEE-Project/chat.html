@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Merienda&family=Playfair+Display&family=Protest+Riot&family=Underdog&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alterra Chatbot</title>
+  <link rel="stylesheet" href="chat.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar open">
+      <div class="sidebar-header">
+        <button class="menu-toggle" onclick="toggleSidebar()">
+          ☰
+        </button>
+        <h2 class="title">Menu Bar</h2>
+      </div>
+      <button class="menu-item" onclick="clearChat()">
+        ➕ New Chat
+      </button>
+      <button class="menu-item">
+        💬 History
+      </button>
+      <button class="menu-item">
+        ⚙️ Settings
+      </button>
+      <button class="menu-item" onclick="window.location.href='home.html'">
+        🏠 Home
+      </button>
+    </aside>
+
+    <!-- Chat Container -->
+    <main class="chat-container">
+      <div class="chat-header">
+        <h1 class="chat-title">Start Chatting with Alterra !</h1>
+        <p class="chat-subtitle">Evolving Conversation, Adapting to You</p>
+      </div>
+
+      <div id="chatMessages" class="chat-messages"></div>
+    </main>
+
+    <!-- Input Area -->
+    <div class="input-container">
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Type your message..."
+        class="chat-input"
+        onkeydown="handleKeyPress(event)"
+      />
+      <button class="send-button" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>
